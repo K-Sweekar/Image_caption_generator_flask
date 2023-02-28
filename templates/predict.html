@@ -1,8 +1,39 @@
-<html>
-    <body>
-        <img src = "{{url_for('static', filename ='image.jpg')}}"">
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            width: 100wh;
+            background: linear-gradient(to right, #5c6bc0, #ab47bc);
+        }
 
-        {{final}}
-    </body>
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        p {
+            font-size: 18px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="{{url_for('static', filename ='image.jpg')}}" />
+    <p>{{final}}</p>
+</body>
+
 </html>
