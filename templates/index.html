@@ -1,8 +1,69 @@
-<html >
-    <form action="{{url_for('after')}}" enctype="multipart/form-data" method="POST">
+<!DOCTYPE html>
+<html lang="en">
 
-        <input type="file" name='image'>
-        
-    <input type="submit">   
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Caption Generator</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100wh;
+            background: linear-gradient(to right, #5c6bc0, #ab47bc);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #fff;
+            text-align: center;
+            text-shadow: 2px 2px #000;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="file"] {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome To Image Caption Generator</h1>
+    <form action="{{url_for('after')}}" enctype="multipart/form-data" method="POST">
+        <input type="file" name="image" />
+
+        <input type="submit" />
     </form>
+</body>
+
 </html>
